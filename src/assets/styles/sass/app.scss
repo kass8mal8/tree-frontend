@@ -1,0 +1,105 @@
+@import './variables';
+@import './header';
+@import './footer';
+@import './home';
+@import './hero';
+@import './latest';
+@import './plant-activity';
+@import './not-found';
+
+.app-container{
+    font-family: $rubik;
+    width: 90%;
+    transform: translateX( 5% );
+
+    ul{
+        li{
+            display: inline-flex;
+            list-style: none;
+        }
+    }
+
+
+    button{
+        padding: 16px;
+        background-color: $white;
+        font-family: $rubik;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor:pointer;
+        letter-spacing: 2px;
+
+        @include responsive(tablet){
+            margin-right: 10px;
+        }
+    }
+
+    input{
+        display: block;
+        margin: 10px auto;
+        padding: 15px;
+        width: 62%;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid $dark-gray;
+        font-family: $rubik;
+    }
+
+    .more-btn{
+        background-color: transparent;
+        color: $white;
+    }
+
+    .step-2{
+        margin-top: 50px;
+        margin-bottom: 40px;
+        width: 100%;
+        transition: .4s ease;
+        text-align: center;
+        
+
+        .forest{
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .dd-tree{
+            width: 35px;
+            background: $white;
+            padding: 10px;
+            border-radius: 40px;
+            margin-top: -20px;
+        }
+
+        button{
+            padding-inline: 30px;
+            color: $white;
+            background: $green;
+            border: 1px solid $green;
+            margin: 10px auto;
+
+            .btn-icon{
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .step-3{
+        margin-top: 10%;
+        padding-block: 40px;
+        text-align: center;
+
+        img{
+            width: 40%;
+        }
+
+        button{
+            color: $white;
+            width: 72%;
+            background: $green;
+            border: 1px solid $green;
+        }
+
+    }
+
+}

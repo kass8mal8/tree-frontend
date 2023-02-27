@@ -1,0 +1,359 @@
+@font-face {
+  font-family: rubik;
+  src: url(../../font/Rubik-Regular.ttf);
+}
+.header {
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+}
+@media screen and (max-width: 425px) {
+  .header {
+    display: none;
+  }
+}
+.header h2 {
+  color: whitesmoke;
+}
+.header .nav {
+  color: rgb(112, 180, 138);
+}
+.header .nav ul {
+  position: absolute;
+  right: 0;
+  margin-top: -40px;
+}
+.header .nav ul li {
+  margin-left: 20px;
+}
+.header .nav ul li:nth-of-type(5) {
+  border: 1px solid whitesmoke;
+  padding: 10px;
+  color: whitesmoke;
+  border-radius: 5px;
+  margin-left: 300px;
+}
+.header .nav ul li:nth-of-type(5):hover {
+  cursor: pointer;
+  transform: scaleX(1.05);
+  transition: 0.3s ease;
+}
+
+.home {
+  width: 100%;
+}
+@media screen and (max-width: 425px) {
+  .home .latest {
+    display: none;
+  }
+}
+
+.hero {
+  text-align: center;
+  color: whitesmoke;
+  margin-top: 140px;
+}
+.hero .desktop-btn, .hero .more-btn {
+  border: 1px solid whitesmoke;
+}
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.hero .hero-text {
+  width: 80%;
+  margin-left: 10%;
+}
+.hero .hero-text p {
+  font-size: 18px;
+}
+.hero .hero-text h2 {
+  font-size: 50px;
+}
+.hero .mobile-content {
+  display: none;
+}
+.hero img {
+  position: absolute;
+  z-index: -3;
+  left: -85px;
+  top: -30px;
+  width: 100vw;
+  height: 65%;
+  opacity: 0.9;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 50px;
+}
+@media screen and (max-width: 425px) {
+  .hero {
+    position: absolute;
+    margin-top: 100%;
+  }
+  .hero .desktop-btn, .hero .more-btn {
+    display: none;
+  }
+  .hero .desktop-content {
+    display: none;
+  }
+  .hero .mobile-content {
+    display: block;
+  }
+  .hero .mobile-content button {
+    background-color: rgb(112, 180, 138);
+    color: whitesmoke;
+    border: 1px solid rgb(112, 180, 138);
+    width: 60%;
+    margin-top: 30px;
+    box-shadow: 2px 1px 3px rgb(112, 180, 138);
+  }
+  .hero .mobile-content p {
+    color: rgb(149, 179, 160);
+  }
+  .hero img {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: -26px;
+    top: -8px;
+    border-radius: 0;
+  }
+  .hero .hero-text h2 {
+    font-size: 25pt;
+  }
+  .hero .hero-text p {
+    font-size: 12pt;
+  }
+}
+
+.latest {
+  text-align: center;
+  margin-top: 50px;
+}
+.latest h2 {
+  margin-top: 30px;
+}
+.latest .cards {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 10px;
+  text-align: left;
+}
+.latest .cards div {
+  margin-top: 40px;
+  background: whitesmoke;
+  border-radius: 10px;
+}
+.latest .cards div article {
+  padding: 15px;
+}
+.latest .cards img {
+  width: 100%;
+  border-radius: 10px;
+}
+.latest .cards img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.latest .cards aside {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.latest .cards .time-icon {
+  color: rgb(112, 180, 138);
+}
+.latest button {
+  background: transparent;
+  color: rgb(112, 180, 138);
+  border: 1px solid rgb(112, 180, 138);
+  margin-top: 30px;
+}
+
+.planting {
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+  color: rgb(93, 126, 105);
+}
+@media screen and (min-width: 768px) {
+  .planting {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 20px;
+  }
+}
+.planting h2 {
+  color: rgb(112, 180, 138);
+}
+.planting ul {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(112, 180, 138);
+}
+.planting ul li:nth-of-type(1) {
+  margin-left: -35px;
+  color: whitesmoke;
+  background: rgb(112, 180, 138);
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 5px;
+  margin-top: -5px;
+  opacity: 0.6;
+}
+.planting ul li:nth-of-type(3) {
+  opacity: 0.8;
+}
+.planting .mob-nav {
+  background: rgb(238, 230, 230);
+  border-radius: 30px;
+  margin-top: 30px;
+}
+.planting .mob-nav ul li {
+  padding: 5px;
+  background: whitesmoke;
+  width: 10px;
+  border: 1px solid whitesmoke;
+  border-radius: 40px;
+  padding-inline: 10px;
+}
+.planting .mob-nav ul li:nth-of-type(1) {
+  background: whitesmoke;
+  margin-left: -40px;
+  margin-top: 0;
+  color: rgb(112, 180, 138);
+  padding-inline: 10px;
+}
+.planting .signup {
+  text-align: center;
+  margin-top: 40px;
+}
+.planting .signup h3 {
+  margin-top: 30px;
+}
+.planting .signup button {
+  width: 69%;
+  color: whitesmoke;
+  margin-top: 20px;
+}
+.planting .signup img {
+  width: 80%;
+}
+.planting .signup .g-btn {
+  background-color: rgb(170, 170, 223);
+  border: 1px solid rgb(170, 170, 223);
+}
+
+.not-found {
+  text-align: center;
+  width: 50%;
+}
+.not-found button {
+  color: rgb(112, 180, 138);
+  border: 1px solid rgb(112, 180, 138);
+}
+.not-found button:hover {
+  background: rgb(112, 180, 138);
+  color: whitesmoke;
+  transition: 0.3s ease;
+  transform: scale(1.05);
+}
+@media screen and (max-width: 425px) {
+  .not-found {
+    width: 100%;
+    margin-top: 30%;
+  }
+  .not-found img {
+    width: 100%;
+  }
+  .not-found div {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .not-found {
+    transform: translateX(45%);
+  }
+}
+
+.app-container {
+  font-family: rubik;
+  width: 90%;
+  transform: translateX(5%);
+}
+.app-container ul li {
+  display: inline-flex;
+  list-style: none;
+}
+.app-container button {
+  padding: 16px;
+  background-color: whitesmoke;
+  font-family: rubik;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 768px) {
+  .app-container button {
+    margin-right: 10px;
+  }
+}
+.app-container input {
+  display: block;
+  margin: 10px auto;
+  padding: 15px;
+  width: 62%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgb(219, 217, 217);
+  font-family: rubik;
+}
+.app-container .more-btn {
+  background-color: transparent;
+  color: whitesmoke;
+}
+.app-container .step-2 {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  width: 100%;
+  transition: 0.4s ease;
+  text-align: center;
+}
+.app-container .step-2 .forest {
+  width: 100%;
+  border-radius: 10px;
+}
+.app-container .step-2 .dd-tree {
+  width: 35px;
+  background: whitesmoke;
+  padding: 10px;
+  border-radius: 40px;
+  margin-top: -20px;
+}
+.app-container .step-2 button {
+  padding-inline: 30px;
+  color: whitesmoke;
+  background: rgb(112, 180, 138);
+  border: 1px solid rgb(112, 180, 138);
+  margin: 10px auto;
+}
+.app-container .step-2 button .btn-icon {
+  margin-left: 20px;
+}
+.app-container .step-3 {
+  margin-top: 10%;
+  padding-block: 40px;
+  text-align: center;
+}
+.app-container .step-3 img {
+  width: 40%;
+}
+.app-container .step-3 button {
+  color: whitesmoke;
+  width: 72%;
+  background: rgb(112, 180, 138);
+  border: 1px solid rgb(112, 180, 138);
+}

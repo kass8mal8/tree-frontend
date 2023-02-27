@@ -1,0 +1,40 @@
+.header{
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+
+    @include responsive(mobile){
+        display: none;
+    }
+
+    h2{
+        color: $white;
+    }
+
+    .nav{
+        color: $green;
+        ul{
+            li{
+                margin-left: 20px;
+
+                &:nth-of-type(5){
+                    border: 1px solid $white;
+                    padding: 10px;
+                    color: $white;
+                    border-radius: 5px;
+                    margin-left: 300px;
+
+                    &:hover{
+                        cursor: pointer;
+                        transform: scaleX(1.05);
+                        transition: .3s ease;
+                    }
+                }
+            }
+            position: absolute;
+            right: 0;
+            margin-top: -40px;
+            
+        }
+    }
+}

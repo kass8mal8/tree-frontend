@@ -1,0 +1,25 @@
+// font
+@font-face {
+    font-family: rubik;
+    src: url(../../font/Rubik-Regular.ttf);
+}
+
+$rubik:rubik;
+
+// colors
+$green:rgb(112, 180, 138);
+$light-green:rgb(93, 126, 105);
+$white:whitesmoke;
+$gray:rgb(238, 230, 230);
+$dark-gray:rgb(219, 217, 217);
+$light-blue:rgb(170, 170, 223);
+
+@mixin responsive($breakpoint){
+    @if ($breakpoint == 'tablet'){
+        @media screen and (min-width:768px) { @content }
+    };
+
+    @if ($breakpoint == 'mobile'){
+        @media screen and (max-width:425px) { @content }
+    };
+}
