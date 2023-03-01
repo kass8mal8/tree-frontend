@@ -39,13 +39,49 @@
   transition: 0.3s ease;
 }
 
-.home {
+.home button {
   width: 100%;
+  border: 1px solid rgb(112, 180, 138);
+  background: rgb(112, 180, 138);
+  color: whitesmoke;
 }
-@media screen and (max-width: 425px) {
-  .home .latest {
-    display: none;
+@media screen and (min-width: 768px) {
+  .home .home-header {
+    width: 80%;
+    transform: translateX(13%);
+    border: 1px solid green;
   }
+}
+.home .home-header .icons {
+  color: gray;
+  float: right;
+}
+.home .home-header .icons li {
+  margin-left: 10px;
+}
+.home .home-header .icons li .icon {
+  height: 25px;
+}
+.home .home-nav h2 {
+  position: relative;
+  top: 13px;
+  color: rgb(20, 80, 43);
+}
+.home .home-nav nav {
+  background: rgb(219, 217, 217);
+  padding-block: 1px;
+  padding-inline: 15px;
+  border-radius: 40px;
+  margin-top: 30px;
+}
+.home .home-nav nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -40px;
+  font-size: 14px;
+}
+.home .home-nav nav ul li {
+  color: rgb(112, 180, 138);
 }
 
 .hero {
@@ -134,36 +170,6 @@
 .latest h2 {
   margin-top: 30px;
 }
-.latest .cards {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  gap: 10px;
-  text-align: left;
-}
-.latest .cards div {
-  margin-top: 40px;
-  background: whitesmoke;
-  border-radius: 10px;
-}
-.latest .cards div article {
-  padding: 15px;
-}
-.latest .cards img {
-  width: 100%;
-  border-radius: 10px;
-}
-.latest .cards img:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.latest .cards aside {
-  overflow: hidden;
-  border-radius: 10px;
-}
-.latest .cards .time-icon {
-  color: rgb(112, 180, 138);
-}
 .latest button {
   background: transparent;
   color: rgb(112, 180, 138);
@@ -251,14 +257,31 @@
   width: 50%;
 }
 .not-found button {
-  color: rgb(112, 180, 138);
+  color: whitesmoke;
   border: 1px solid rgb(112, 180, 138);
+  background: rgb(112, 180, 138);
 }
 .not-found button:hover {
   background: rgb(112, 180, 138);
   color: whitesmoke;
   transition: 0.3s ease;
   transform: scale(1.05);
+}
+@media screen and (min-width: 768px) {
+  .not-found {
+    transform: translateX(45%);
+  }
+  .not-found button {
+    color: rgb(112, 180, 138);
+    border: 1px solid rgb(112, 180, 138);
+    background: transparent;
+  }
+  .not-found button:hover {
+    background: rgb(112, 180, 138);
+    color: whitesmoke;
+    transition: 0.3s ease;
+    transform: scale(1.05);
+  }
 }
 @media screen and (max-width: 425px) {
   .not-found {
@@ -272,9 +295,13 @@
     margin-top: 50px;
   }
 }
-@media screen and (min-width: 768px) {
-  .not-found {
-    transform: translateX(45%);
+
+.main {
+  width: 100%;
+}
+@media screen and (max-width: 425px) {
+  .main .latest {
+    display: none;
   }
 }
 
@@ -282,6 +309,7 @@
   font-family: rubik;
   width: 90%;
   transform: translateX(5%);
+  color: rgb(93, 126, 105);
 }
 .app-container ul li {
   display: inline-flex;
@@ -289,7 +317,6 @@
 }
 .app-container button {
   padding: 16px;
-  background-color: whitesmoke;
   font-family: rubik;
   font-weight: bold;
   border-radius: 5px;
@@ -356,4 +383,74 @@
   width: 72%;
   background: rgb(112, 180, 138);
   border: 1px solid rgb(112, 180, 138);
+}
+.app-container .hide {
+  gap: 10px;
+  text-align: left;
+  overflow-x: scroll;
+}
+.app-container .hide .nav-icon {
+  border: 1px solid whitesmoke;
+  background: whitesmoke;
+  padding: 10px;
+  border-radius: 20px;
+  position: absolute;
+  margin-top: 47%;
+  right: -10px;
+  z-index: 2;
+  box-shadow: 0 2px 3px 3px rgb(207, 202, 202);
+}
+.app-container .hide .cards {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  width: 665px;
+  margin-top: -30px;
+}
+@media screen and (min-width: 768px) {
+  .app-container .hide .cards {
+    width: 100%;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 10px;
+  }
+}
+.app-container .hide .cards div {
+  margin-top: 40px;
+  background: whitesmoke;
+  border-radius: 10px;
+  position: relative;
+}
+.app-container .hide .cards div h3 {
+  color: rgb(20, 80, 43);
+}
+.app-container .hide .cards div .fav-icon {
+  position: absolute;
+  color: white;
+  top: 10px;
+  right: 10px;
+}
+@media screen and (max-width: 425px) {
+  .app-container .hide .cards div {
+    margin-right: 10px;
+  }
+}
+.app-container .hide .cards div article {
+  padding: 15px;
+  font-size: 15px;
+}
+.app-container .hide img {
+  width: 100%;
+  border-radius: 10px;
+}
+.app-container .hide img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.app-container .hide aside {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.app-container .hide .time-icon {
+  color: rgb(112, 180, 138);
 }

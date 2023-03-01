@@ -1,32 +1,29 @@
 import planting from "../../assets/images/ptng-illust.jpg"
 import { useNavigate } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth"
+import { auth } from "../firebase"
+//import { useEffect } from "react"
 
 const SignUp = () => {
 
-    // uri_endpoint = api endpoint via which request are made to signup new users 
-    const url = "http://localhost:3001/auth/google" 
     let count = 0
     const navigate = useNavigate()
+    const provider = new GoogleAuthProvider()
 
-    const handleGoogleAuth = async(url) =>{
-        navigate('/plant/2')
+    const handleGoogleSignIn = async() => {
         try {
-            const user = await fetch(url, {
-                "Access-Control-Allow-Origin":"http://localhost:3000",
-                mode:"no-cors"
-            })
-            console.log(user)
-            
-        } catch (error) {
+            const user = await signInWithPopup(auth, provider)
+            console.log(user);
+            navigate('/plant/2')
+
+        } 
+        catch (error) {
             console.log(error.message);
         }
-        count += 1
-        console.log(count);
-        
     }
 
-    // end of signup logic
+    
     console.log(count);
 
     return ( 
@@ -37,12 +34,12 @@ const SignUp = () => {
                 transition={{ duration:0.3}}
                 exit={{ x: -300, opacity: 0 }}
 
-                className="signup">
+                className="signup" >
                 <img src={planting} alt="" />
                 <p>Few steps away from making positive impact on environment... be amongst us for our globe.</p>
                 <button 
                     className="g-btn" 
-                    onClick={() => handleGoogleAuth(url)}> Continue with Google 
+                    onClick={handleGoogleSignIn}> Continue with Google 
                 </button>
             </motion.div>
         </AnimatePresence>

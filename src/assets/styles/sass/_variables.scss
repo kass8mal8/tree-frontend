@@ -13,6 +13,7 @@ $white:whitesmoke;
 $gray:rgb(238, 230, 230);
 $dark-gray:rgb(219, 217, 217);
 $light-blue:rgb(170, 170, 223);
+$dark-green:rgb(20, 80, 43);
 
 @mixin responsive($breakpoint){
     @if ($breakpoint == 'tablet'){

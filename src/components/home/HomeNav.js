@@ -1,6 +1,12 @@
-const MainNav = () => {
+import { useContext } from "react";
+import { userContext } from "../../App";
+
+const HomeNav = () => {
+    const user = useContext(userContext)
+
     return ( 
-        <div className="main-nav">
+        <div className="home-nav">
+            { user && <h2>Hello {user.displayName}</h2> }
             <h2>Help us save the earth</h2>
 
             <nav>
@@ -14,4 +20,4 @@ const MainNav = () => {
      );
 }
  
-export default MainNav;
+export default HomeNav;

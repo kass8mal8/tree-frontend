@@ -6,11 +6,13 @@
 @import './latest';
 @import './plant-activity';
 @import './not-found';
+@import './main';
 
 .app-container{
     font-family: $rubik;
     width: 90%;
     transform: translateX( 5% );
+    color: $light-green;
 
     ul{
         li{
@@ -22,7 +24,6 @@
 
     button{
         padding: 16px;
-        background-color: $white;
         font-family: $rubik;
         font-weight: bold;
         border-radius: 5px;
@@ -100,6 +101,91 @@
             border: 1px solid $green;
         }
 
+    }
+
+    .hide{
+        gap: 10px;
+        text-align: left;
+        overflow-x: scroll;
+        
+        .nav-icon{
+            border: 1px solid $white;
+            background: $white;
+            padding: 10px;
+            border-radius: 20px;
+            position: absolute;
+            margin-top: 47%;
+            right: -10px;
+            z-index: 2;
+            box-shadow: 0 2px 3px 3px rgb(207, 202, 202);
+        }
+        
+        .cards{
+            display: flex;
+            justify-content: space-between;   
+            flex-flow: row;
+            width: 665px;
+            margin-top: -30px;
+
+            @include responsive(tablet){
+                width: 100%;
+                grid-template-columns: 25% 25% 25% 25%;
+                gap: 10px;
+            }
+            
+
+            div{
+                margin-top: 40px;
+                background: $white;
+                border-radius: 10px;
+                position: relative;
+                
+                h3{
+                    color: $dark-green;
+                }
+
+                .fav-icon{
+                    position: absolute;
+                    color: white;
+                    top: 10px;
+                    right: 10px;
+                }
+
+                @include responsive(mobile){
+                    margin-right: 10px;
+                }
+    
+                article{
+                    padding: 15px;
+                    font-size: 15px;
+                }
+            }
+
+        }
+
+        
+
+        
+
+        img{
+            width: 100%;
+            border-radius: 10px;
+
+            &:hover{
+                transform: scale(1.05);
+                cursor: pointer;
+                transition: .3s ease;
+            }
+        }
+
+        aside{
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .time-icon{
+            color: $green
+        }
     }
 
 }

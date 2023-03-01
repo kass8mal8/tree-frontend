@@ -6,43 +6,6 @@
         margin-top: 30px;
     }
 
-    .cards{
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-        gap: 10px;
-        text-align: left;
-
-        div{
-            margin-top: 40px;
-            background: $white;
-            border-radius: 10px;
-
-            article{
-                padding: 15px;
-            }
-        }
-
-        img{
-            width: 100%;
-            border-radius: 10px;
-
-            &:hover{
-                transform: scale(1.05);
-                cursor: pointer;
-                transition: .3s ease;
-            }
-        }
-
-        aside{
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .time-icon{
-            color: $green
-        }
-    }
-
     button{
         background: transparent;
         color: $green;

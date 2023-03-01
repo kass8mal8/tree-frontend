@@ -1,0 +1,10 @@
+.main{
+    width: 100%;
+
+    .latest{
+        @include responsive(mobile){
+            display: none;
+        }
+    }
+
+}

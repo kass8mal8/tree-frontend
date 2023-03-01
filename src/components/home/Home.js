@@ -1,20 +1,19 @@
-import Header from "../header/Header";
-import Hero from "../header/Hero";
-import Latest from "./Latest";
-
-// End of import statements
+import Cards from "../main/Cards";
+import HomeHeader from "./HomeHeader";
+import Today from "./Today";
 
 const Home = () => {
-
     return ( 
         <div className="home">
-            <Header />
+            <HomeHeader />
 
-            {/* Section That appears after the header it contains the forest image */}
-            <Hero /> 
+            <h3>Latest plants</h3>
+            <Cards />
 
-            {/* varies from desktop to mobile rendered differently */}
-            <Latest />
+            <h3> Today </h3>
+            <Today />
+
+            <button> Plant a tree </button>
         </div>
      );
 }
