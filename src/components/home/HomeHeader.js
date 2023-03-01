@@ -19,7 +19,7 @@ const HomeHeader = () => {
                 </li>
                 <li>
                     { user ? 
-                        <img src={user.photoURL} alt="user-profile"  className="icon"/> : 
+                        <img src={user.photoURL} alt="user-profile" /> : 
                         <FontAwesomeIcon icon={faUserCircle} className="icon"/> 
                     }
                 </li>

@@ -7,29 +7,38 @@
         color: $white;
     }
 
-    .home-header{
+    margin-top: 20px;
 
-        @include responsive(tablet){
-            width: 80%;
-            transform: translateX(13%);
-            border: 1px solid green;
-            
-        }
+    .home-header{
 
         .icons{
             color: gray;
             float: right;
+            margin-top: -10px;
 
             li{       
-                margin-left: 10px;         
+                margin-left: 10px;  
+
                 .icon{
-                    height: 25px;
+                    height:30px;
+                }
+
+                img{
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 20px;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
             }
         }
     }
 
     .home-nav{
+
+        margin-top: 40px;
 
         h2{
             position: relative;

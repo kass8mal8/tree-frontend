@@ -106,7 +106,10 @@
     .hide{
         gap: 10px;
         text-align: left;
-        overflow-x: scroll;
+        
+        @include responsive(mobile){
+            overflow-x: scroll;
+        }
         
         .nav-icon{
             border: 1px solid $white;

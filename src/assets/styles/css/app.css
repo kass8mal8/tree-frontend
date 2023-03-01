@@ -39,28 +39,36 @@
   transition: 0.3s ease;
 }
 
+.home {
+  margin-top: 20px;
+}
 .home button {
   width: 100%;
   border: 1px solid rgb(112, 180, 138);
   background: rgb(112, 180, 138);
   color: whitesmoke;
 }
-@media screen and (min-width: 768px) {
-  .home .home-header {
-    width: 80%;
-    transform: translateX(13%);
-    border: 1px solid green;
-  }
-}
 .home .home-header .icons {
   color: gray;
   float: right;
+  margin-top: -10px;
 }
 .home .home-header .icons li {
   margin-left: 10px;
 }
 .home .home-header .icons li .icon {
-  height: 25px;
+  height: 30px;
+}
+.home .home-header .icons li img {
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+}
+.home .home-header .icons li img:hover {
+  cursor: pointer;
+}
+.home .home-nav {
+  margin-top: 40px;
 }
 .home .home-nav h2 {
   position: relative;
@@ -387,7 +395,11 @@
 .app-container .hide {
   gap: 10px;
   text-align: left;
-  overflow-x: scroll;
+}
+@media screen and (max-width: 425px) {
+  .app-container .hide {
+    overflow-x: scroll;
+  }
 }
 .app-container .hide .nav-icon {
   border: 1px solid whitesmoke;

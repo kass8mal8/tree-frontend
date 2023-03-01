@@ -6,7 +6,7 @@ const HomeNav = () => {
 
     return ( 
         <div className="home-nav">
-            { user && <h2>Hello {user.displayName}</h2> }
+            { user && <h4>Hello {user.displayName}</h4> }
             <h2>Help us save the earth</h2>
 
             <nav>
