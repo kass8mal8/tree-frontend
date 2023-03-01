@@ -22,7 +22,6 @@ const SignUp = () => {
             console.log(error.message);
         }
     }
-
     
     console.log(count);
 
