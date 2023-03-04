@@ -7,9 +7,9 @@ import { useContext } from "react";
 
 const HomeHeader = () => {
     const user = useContext(userContext)
-    const d = new Date()
-    
-    console.log(d.getHours());
+    const handleProfile = () => { 
+        document.querySelector('.overlay').classList.toggle('active')
+    }
 
     return (  
         <div className="home-header">
@@ -17,7 +17,7 @@ const HomeHeader = () => {
                 <li>
                     <FontAwesomeIcon icon={faCog} className="icon" />
                 </li>
-                <li>
+                <li onClick={handleProfile}>
                     { user ? 
                         <img src={user.photoURL} alt="user-profile" /> : 
                         <FontAwesomeIcon icon={faUserCircle} className="icon"/> 

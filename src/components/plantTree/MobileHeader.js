@@ -12,7 +12,7 @@ const MobileHeader = () => {
                     <FontAwesomeIcon icon={faArrowLeftLong}  onClick={() => navigate(-1)} />
                 </li>
                 <li> Plant your first tree</li>
-                <li> Cancel</li>
+                <li onClick={() => navigate('/')}> Cancel</li>
             </ul>
             <MobileNav />
         </div>

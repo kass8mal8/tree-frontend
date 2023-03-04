@@ -27,7 +27,7 @@ const App =({children})=> {
           <Routes>
               {/* <Route path='/home' element={<Home />} /> */}
               <Route path = '/' element={ user ? <Home /> : <Main /> } />
-              <Route path='/plant/' element={<PlantActivity />} >
+              <Route path='plant' element={<PlantActivity />} >
                 <Route path='signup' element={<SignUp />} />
                 <Route path='2' element={<Step2 />} />
                 <Route path='3' element={<Step3 />} />

@@ -3,27 +3,46 @@ import { useNavigate } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 import { auth } from "../firebase"
+import axios from "axios"
+import { useContext } from "react";
+import { userContext } from "../../App";
+
 //import { useEffect } from "react"
 
 const SignUp = () => {
 
-    let count = 0
+    const user = useContext(userContext)
     const navigate = useNavigate()
     const provider = new GoogleAuthProvider()
+    const uri = 'http://localhost:5000/users'
 
-    const handleGoogleSignIn = async() => {
-        try {
-            const user = await signInWithPopup(auth, provider)
-            console.log(user);
-            navigate('/plant/2')
-
-        } 
-        catch (error) {
-            console.log(error.message);
+    const postUserData = async() => {
+        const user_info = {
+            name: user.displayName,
+            photoURL: user.photoURL,
+            email: user.email,
+            googleID: user.uid
         }
+    
+        const res = await axios.post(uri, user_info, {
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+        console.log(res.data)
     }
     
-    console.log(count);
+    const handleGoogleSignIn = async() => {
+        try {
+            await signInWithPopup(auth, provider)
+            navigate('/plant/2')
+        } 
+        catch (error) {
+            console.log(error.message)
+        }
+
+        postUserData()
+    }
 
     return ( 
         <AnimatePresence>

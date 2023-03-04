@@ -42,6 +42,39 @@
 .home {
   margin-top: 20px;
 }
+.home .overlay.active {
+  transition: 0.3s ease;
+  display: block;
+}
+.home .overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+  top: -40px;
+  left: -24px;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  transition: 0.3s ease;
+}
+.home .overlay .profile {
+  border: 1px solid whitesmoke;
+  text-align: center;
+  border-radius: 10px;
+  padding: 25px;
+  width: 71%;
+  margin-top: 100px;
+  transform: translateX(8%);
+  background: whitesmoke;
+}
+.home .overlay .profile button {
+  background: transparent;
+  color: red;
+  border: 1px solid red;
+}
+.home .overlay .profile img {
+  width: 70px;
+}
 .home button {
   width: 100%;
   border: 1px solid rgb(112, 180, 138);
@@ -259,6 +292,26 @@
   background-color: rgb(170, 170, 223);
   border: 1px solid rgb(170, 170, 223);
 }
+.planting .finish {
+  border: 1px solid rgb(238, 230, 230);
+  padding-block: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 30%;
+}
+.planting .finish .check-icon {
+  height: 35px;
+  color: whitesmoke;
+  background-color: rgb(112, 180, 138);
+  padding: 15px;
+  border: 1px solid rgb(112, 180, 138);
+  border-radius: 50px;
+}
+.planting .finish button {
+  color: rgb(112, 180, 138);
+  border: 1px solid rgb(112, 180, 138);
+  width: 70%;
+}
 
 .not-found {
   text-align: center;
@@ -440,6 +493,12 @@
   color: white;
   top: 10px;
   right: 10px;
+  transition: 0.3s ease;
+}
+.app-container .hide .cards div .fav-icon:hover {
+  color: crimson;
+  transform: scale(1.3);
+  transition: 0.3s ease;
 }
 @media screen and (max-width: 425px) {
   .app-container .hide .cards div {
