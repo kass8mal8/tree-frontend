@@ -14,7 +14,7 @@ const SignUp = () => {
     const user = useContext(userContext)
     const navigate = useNavigate()
     const provider = new GoogleAuthProvider()
-    const uri = 'http://localhost:5000/users'
+    const uri = 'https://treeplanting.onrender.com/users'
 
     const postUserData = async() => {
         const user_info = {
