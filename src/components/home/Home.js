@@ -1,26 +1,28 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { userContext } from "../../App";
 import Cards from "../main/Cards";
-import useFetch from "../useFetch";
 import HomeHeader from "./HomeHeader";
 import Today from "./Today";
+import useFetch from "../useFetch"
 
 const Home = () => {
 
     const navigate = useNavigate()
     const user = useContext(userContext)
 
+    const url = 'https://treeplanting.onrender.com/trees'
+    const trees = useFetch(url) 
+
     const handleProfile = () => { 
         document.querySelector('.overlay').classList.toggle('active')
     }
 
-    const url = 'http://localhost:5000/trees'
-    const trees = useFetch(url)
+    console.log(trees)
 
     return ( 
         <div className="home">
-            <HomeHeader />
+            <HomeHeader handleProfile = {handleProfile}/>
     
             <h3>Latest plants</h3>
             <Cards />
@@ -38,9 +40,7 @@ const Home = () => {
                 </div>
             </div> }
 
-            <button onClick={() => navigate('/plant/3')}> Plant a tree </button>
-
-            
+            <button onClick={() => navigate('/plant/3')}> Plant a tree </button>            
         </div>
      );
 }

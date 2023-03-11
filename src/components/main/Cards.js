@@ -2,7 +2,7 @@ import eucalyptus from "../../assets/images/eucalyptus.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClock, faArrowRight, faHeart } from "@fortawesome/free-solid-svg-icons"
 
-const Cards = () => {
+const Cards = ({trees}) => {
     // maximum latest = 4 for desktop and 2 for mobile
 
     const plants = [ // images will be replaced by user's avatar

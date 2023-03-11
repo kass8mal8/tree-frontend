@@ -13,19 +13,14 @@ const Step3 = () => {
     
     const handlePost = async(e) => {        
         e.preventDefault()
-        const d = new Date()
 
-        try {
+        try {    
+
             const tree_data = {
                 owner: user.displayName,
                 owner_id: user.uid,
-                type: treeRef.current.value,
-                dateObject: {
-                    day: d.getDay(),
-                    month: d.getMonth(),
-                    date: d.getDate(),
-                    year: d.getFullYear()
-                }
+                owner_pic: user.photoURL,
+                type: treeRef.current.value
             }
 
             const res = await axios.post(uri, tree_data, {

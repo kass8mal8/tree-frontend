@@ -46,6 +46,40 @@
   transition: 0.3s ease;
   display: block;
 }
+.home .today {
+  width: 100%;
+}
+.home .today ul {
+  display: inline-flex;
+  margin-bottom: 0px;
+  background-color: whitesmoke;
+  width: 88%;
+  position: relative;
+  border-radius: 10px;
+}
+.home .today ul li:nth-of-type(1) {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+}
+.home .today ul li:nth-of-type(2) {
+  display: block;
+  margin-left: 30px;
+}
+.home .today ul li:nth-of-type(2) p:nth-of-type(1) {
+  margin-bottom: -5px;
+}
+.home .today ul li:nth-of-type(3) {
+  transform: scale(1.5);
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+.home .today img {
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+}
 .home .overlay {
   width: 100vw;
   height: 100vh;
@@ -80,11 +114,17 @@
   border: 1px solid rgb(112, 180, 138);
   background: rgb(112, 180, 138);
   color: whitesmoke;
+  margin-top: 20px;
+}
+.home .home-header h3 {
+  position: relative;
+  z-index: 3;
+  top: 30px;
 }
 .home .home-header .icons {
   color: gray;
   float: right;
-  margin-top: -10px;
+  margin-top: -15px;
 }
 .home .home-header .icons li {
   margin-left: 10px;

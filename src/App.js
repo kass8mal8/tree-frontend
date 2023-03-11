@@ -7,35 +7,40 @@ import SignUp from './components/plantTree/SignUp';
 import Finish from './components/plantTree/Finish';
 import NotFound from "./components/NotFound"
 import Home from './components/home/Home';
+import useFetch from "./components/useFetch";
 
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './components/firebase';
 
 import { useState, createContext } from 'react';
-import { Route, Routes } from "react-router"
+import { createRoutesFromChildren, Route, Routes } from "react-router"
 
 export const userContext = createContext()
+export const treesContext = createContext()
 
 const App =({children})=> {
+  
+  //createRoutesFromChildren
+  //const router = createBrowserRouter(routeProvider())
 
   const [user, setUser] = useState({})
   onAuthStateChanged(auth, currentUser => setUser(currentUser) )
 
   return (
     <userContext.Provider value={user}>
-      <div className="app-container">
-          <Routes>
-              {/* <Route path='/home' element={<Home />} /> */}
-              <Route path = '/' element={ user ? <Home /> : <Main /> } />
-              <Route path='plant' element={<PlantActivity />} >
-                <Route path='signup' element={<SignUp />} />
-                <Route path='2' element={<Step2 />} />
-                <Route path='3' element={<Step3 />} />
-                <Route path='finish' element={<Finish />} />
-              </Route>
-              <Route path='*' element={<NotFound />} />
-          </Routes>
-      </div>
+        <div className="app-container">
+            <Routes>
+                {/* <Route path='/home' element={<Home />} /> */}
+                <Route path = '/' element={ user ? <Home /> : <Main /> } />
+                <Route path='plant' element={<PlantActivity />} >
+                  <Route path='signup' element={<SignUp />} />
+                  <Route path='2' element={<Step2 />} />
+                  <Route path='3' element={<Step3 />} />
+                  <Route path='finish' element={<Finish />} />
+                </Route>
+                <Route path='*' element={<NotFound />} />
+            </Routes>
+        </div>
     </userContext.Provider>
   );
 }
