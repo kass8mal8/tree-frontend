@@ -8,7 +8,7 @@ import { userContext } from "../../App";
 const Step3 = () => {
     const navigate = useNavigate()
     const user = useContext(userContext)
-    const uri = "http://localhost:5000/trees"
+    const uri = "https://treeplanting.onrender.com/trees"
     const treeRef = useRef()
     
     const handlePost = async(e) => {        
