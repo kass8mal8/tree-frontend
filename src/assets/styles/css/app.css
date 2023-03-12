@@ -40,6 +40,7 @@
 }
 
 .home {
+  position: relative;
   margin-top: 20px;
 }
 .home .overlay.active {
@@ -59,21 +60,27 @@
 }
 .home .today ul li:nth-of-type(1) {
   position: absolute;
-  left: 20px;
+  left: 10px;
   top: 25px;
 }
 .home .today ul li:nth-of-type(2) {
   display: block;
-  margin-left: 30px;
+  margin-left: 15px;
+}
+.home .today ul li:nth-of-type(2) p {
+  font-size: 15px;
 }
 .home .today ul li:nth-of-type(2) p:nth-of-type(1) {
   margin-bottom: -5px;
 }
 .home .today ul li:nth-of-type(3) {
-  transform: scale(1.5);
   position: absolute;
-  right: 20px;
-  top: 30px;
+  right: 10px;
+  top: 20px;
+  color: rgb(112, 180, 138);
+  background: white;
+  padding: 10px;
+  border-radius: 20px;
 }
 .home .today img {
   border-radius: 20px;
@@ -114,7 +121,23 @@
   border: 1px solid rgb(112, 180, 138);
   background: rgb(112, 180, 138);
   color: whitesmoke;
-  margin-top: 20px;
+  margin: 20px 0;
+  box-shadow: 0 3px 5px 3px rgb(219, 218, 218);
+}
+.home .home-header.sticky {
+  position: absolute;
+  z-index: 5;
+  top: 20px;
+  background: whitesmoke;
+  width: 100%;
+  transition: 0.3s ease;
+  padding: 15px 25px;
+  left: -25px;
+  border-radius: 0 0 20px 20px;
+}
+.home .home-header {
+  position: relative;
+  transition: 0.3s ease;
 }
 .home .home-header h3 {
   position: relative;
@@ -324,6 +347,7 @@
   width: 69%;
   color: whitesmoke;
   margin-top: 20px;
+  box-shadow: 0 3px 5px 3px rgb(219, 218, 218);
 }
 .planting .signup img {
   width: 80%;
@@ -411,6 +435,7 @@
   width: 90%;
   transform: translateX(5%);
   color: rgb(93, 126, 105);
+  position: relative;
 }
 .app-container ul li {
   display: inline-flex;
@@ -524,16 +549,18 @@
   background: whitesmoke;
   border-radius: 10px;
   position: relative;
+  height: 200px;
+  width: 100%;
 }
 .app-container .hide .cards div h3 {
   color: rgb(20, 80, 43);
 }
 .app-container .hide .cards div .fav-icon {
   position: absolute;
-  color: white;
-  top: 10px;
-  right: 10px;
+  color: whitesmoke;
+  transform: scale(1.5);
   transition: 0.3s ease;
+  right: 10px;
 }
 .app-container .hide .cards div .fav-icon:hover {
   color: crimson;
@@ -549,8 +576,13 @@
   padding: 15px;
   font-size: 15px;
 }
+.app-container .hide .cards div article .time {
+  position: absolute;
+  bottom: 5px;
+}
 .app-container .hide img {
   width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 .app-container .hide img:hover {
@@ -564,4 +596,5 @@
 }
 .app-container .hide .time-icon {
   color: rgb(112, 180, 138);
+  margin-right: 10px;
 }

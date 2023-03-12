@@ -1,52 +1,41 @@
-import eucalyptus from "../../assets/images/eucalyptus.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faClock, faArrowRight, faHeart } from "@fortawesome/free-solid-svg-icons"
+import { faClock, faHeart } from "@fortawesome/free-solid-svg-icons"
 
 const Cards = ({trees}) => {
     // maximum latest = 4 for desktop and 2 for mobile
-
-    const plants = [ // images will be replaced by user's avatar
-        {src:eucalyptus, name:"James", tree:"Planted evergreen tree"},
-        {src:eucalyptus, name:"James", tree:"Planted evergreen tree"},
-        {src:eucalyptus, name:"James", tree:"Planted evergreen tree"},
-        {src:eucalyptus, name:"James", tree:"Planted evergreen tree"}
-    ]
     
+    const plants = trees && trees.slice(-4).reverse()
 
-    const handleScroll = () => {}
     const handleFav = () => {
-        alert("hello")
-        document.querySelector('.fav-icon').getElementsByClassName.color = "red"
+        document.querySelector('.fav-icon').color = "red"
     }
     
     // name, tree and source of image will be fetched from the database
 
     return ( 
         <div className="hide">
-            
-            <FontAwesomeIcon 
-                    icon={faArrowRight}
-                    onClick={handleScroll}
-                    className="nav-icon" />
 
             <div className="cards">
-                {plants.map( plant => (
-                    <div>
+                {plants && plants.map( plant => (
+                    <div key={plant._id}>
                         <aside>
-                            <img src={plant.src} alt="illustration" /> 
+                            <img src={plant.owner_pic} alt="illustration" /> 
                         </aside>
                         <FontAwesomeIcon 
                             icon={faHeart} 
                             className="fav-icon"
                             onClick={handleFav}/>
                         <article>
-                            <h3>{plant.name}</h3>
-                            <p>{plant.tree}</p>
-                            <FontAwesomeIcon icon={faClock}  className="time-icon"/>2 minutes ago
+                            <h3>{plant.owner}</h3>
+                            <p>planted {plant.type}</p>
+                            <p className="time">
+                                <FontAwesomeIcon icon={faClock}  className="time-icon"/>{plant.createdAt.slice(11, 16)} H
+                            </p>
                         </article>
                     </div>
                 ))} 
             </div>
+
         </div>
      );
 }

@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCog, faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import HomeNav from "./HomeNav";
 import { userContext } from "../../App";
 import { useContext, useState } from "react";
 
@@ -9,9 +8,21 @@ const HomeHeader = ({ handleProfile }) => {
     const user = useContext(userContext)
     const d = new Date().toLocaleTimeString()
 
+    const navbar = document.querySelector('.home-header')
+    // const sticky = navbar.offsetTop
+
+    window.onscroll =()=> {        
+        if(window.pageYOffset >= 40){
+            navbar.classList.add("sticky")        
+        }
+        else{
+            navbar.classList.remove("sticky")
+        }
+    }
+
     return (  
         <div className="home-header">
-            {parseInt(d[0]) < 12 ? <h3> morning {user.displayName} </h3> : <h3>afternoon {user.displayName}</h3>}
+            { user && parseInt(d[0]) < 12 ? <h3> morning {user.displayName} </h3> : <h3>afternoon {user.displayName}</h3>}
 
             <ul className="icons">
                 <li>
@@ -24,8 +35,6 @@ const HomeHeader = ({ handleProfile }) => {
                     }
                 </li>
             </ul>
-
-            <HomeNav />
         </div>
     );
 }

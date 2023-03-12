@@ -1,13 +1,15 @@
 .home{
 
+    position: relative;
+
     .overlay.active{
         transition: .3s ease;
         display: block;
     }
 
     .today{
-
         width: 100%;
+
         ul{
             display: inline-flex;
             margin-bottom: 0px;
@@ -19,15 +21,16 @@
 
                 &:nth-of-type(1){
                     position: absolute;
-                    left: 20px;
+                    left: 10px;
                     top: 25px;
                 }
 
                 &:nth-of-type(2){
                     display: block;
-                    margin-left: 30px;
+                    margin-left: 15px;
 
                     p{
+                        font-size: 15px;
                         &:nth-of-type(1){
                             margin-bottom: -5px;
                         }
@@ -35,10 +38,13 @@
                 }
 
                 &:nth-of-type(3){
-                    transform: scale(1.5);
                     position: absolute;
-                    right: 20px;
-                    top: 30px;
+                    right: 10px;
+                    top: 20px;
+                    color: $green;
+                    background: white;
+                    padding: 10px;
+                    border-radius: 20px;
                 }
             }
         }
@@ -83,26 +89,39 @@
         }
     }
 
-    
-
     button{
         width: 100%;
         border: 1px solid $green;
         background: $green;
         color: $white;
-        margin-top: 20px;
+        margin:20px 0;
+        box-shadow:0 3px 5px 3px rgb(219, 218, 218);
     }
 
     margin-top: 20px;
 
+    .home-header.sticky{
+        position: absolute;
+        z-index: 5;
+        top: 20px;
+        background: $white;
+        width: 100%;
+        transition: .3s ease;
+        padding:15px 25px;
+        left: -25px;
+        border-radius: 0 0 20px 20px;
+    }
     .home-header{
-
+        position: relative;
+        transition: .3s ease;
+        
         h3{
             position: relative;
             z-index: 3;
             top: 30px;
             
         }
+
         .icons{
             color: gray;
             float: right;
@@ -156,5 +175,6 @@
                 }
             }
         }
+
     }
 }

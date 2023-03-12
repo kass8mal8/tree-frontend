@@ -4,6 +4,7 @@ import { userContext } from "../../App";
 import Cards from "../main/Cards";
 import HomeHeader from "./HomeHeader";
 import Today from "./Today";
+import HomeNav from "./HomeNav";
 import useFetch from "../useFetch"
 
 const Home = () => {
@@ -11,21 +12,24 @@ const Home = () => {
     const navigate = useNavigate()
     const user = useContext(userContext)
 
-    const url = 'https://treeplanting.onrender.com/trees'
+    const url = 'http://localhost:5000/trees'
     const trees = useFetch(url) 
 
     const handleProfile = () => { 
         document.querySelector('.overlay').classList.toggle('active')
     }
 
-    console.log(trees)
+    //console.log(trees)
+    
+    
 
     return ( 
         <div className="home">
             <HomeHeader handleProfile = {handleProfile}/>
+            <HomeNav />
     
             <h3>Latest plants</h3>
-            <Cards />
+            <Cards trees={trees} />
 
             <h3> Today </h3>
             <Today />
