@@ -12,7 +12,8 @@ const HomeHeader = ({ handleProfile }) => {
     // const sticky = navbar.offsetTop
 
     window.onscroll =()=> {        
-        if(window.pageYOffset >= 40){
+        if(window.pageYOffset >= 50){
+            console.log(window.pageYOffset)
             navbar.classList.add("sticky")        
         }
         else{

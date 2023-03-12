@@ -12,7 +12,7 @@ const Home = () => {
     const navigate = useNavigate()
     const user = useContext(userContext)
 
-    const url = 'http://localhost:5000/trees'
+    const url = 'https://treeplanting.onrender.com/trees'
     const trees = useFetch(url) 
 
     const handleProfile = () => { 

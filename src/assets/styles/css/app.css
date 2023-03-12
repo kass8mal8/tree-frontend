@@ -549,7 +549,7 @@
   background: whitesmoke;
   border-radius: 10px;
   position: relative;
-  height: 200px;
+  height: 305px;
   width: 100%;
 }
 .app-container .hide .cards div h3 {
@@ -578,11 +578,10 @@
 }
 .app-container .hide .cards div article .time {
   position: absolute;
-  bottom: 5px;
+  bottom: 2px;
 }
 .app-container .hide img {
   width: 100%;
-  height: 100%;
   border-radius: 10px;
 }
 .app-container .hide img:hover {

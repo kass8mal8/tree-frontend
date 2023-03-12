@@ -6,7 +6,7 @@ import useFetch from "../useFetch"
 
 const Finish = () => {
     
-    const url = 'http://localhost:5000/trees'
+    const url = 'https://treeplanting.onrender.com/trees'
     const trees = useFetch(url)
     const tree = trees && trees[trees.length - 1]
 

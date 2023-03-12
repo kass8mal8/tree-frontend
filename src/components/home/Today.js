@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useFetch from "../useFetch"
 
 const Today = () => {
-    const url = 'http://localhost:5000/trees/today'
+    const url = 'https://treeplanting.onrender.com/trees/today'
     let trees = useFetch(url)
-    trees = trees && trees.slice(0, 3)
+    trees = trees && trees.slice(0, 2)
 
     return ( 
         <div className="today">
