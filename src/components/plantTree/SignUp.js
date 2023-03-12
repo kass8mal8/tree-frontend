@@ -35,13 +35,13 @@ const SignUp = () => {
     const handleGoogleSignIn = async() => {
         try {
             await signInWithPopup(auth, provider)
+            postUserData()
             navigate('/plant/2')
         } 
         catch (error) {
             console.log(error.message)
         }
 
-        postUserData()
     }
 
     return ( 
