@@ -29,12 +29,13 @@ const Step3 = () => {
                 }
             })
             console.log(res.data)
-            navigate('/plant/finish')
+            // navigate('/plant/finish')
 
         } 
         catch (error) {
             console.log(error.message);
         }
+        navigate('/plant/finish')
         
     }
 

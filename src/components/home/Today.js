@@ -1,15 +1,21 @@
-import { faHeart, faClock } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faClock, faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useFetch from "../useFetch"
 
 const Today = () => {
     const url = 'https://treeplanting.onrender.com/trees/today'
-    let trees = useFetch(url)
+    let { data:trees, loading, error } = useFetch(url)
     trees = trees && trees.slice(0, 2)
 
     return ( 
         <div className="today">
-            { !trees ? <div> <p>Oops... No trees planted today, be the first one.</p> </div>: trees.map( tree => (
+            { loading && <div>Loading please wait...</div> }
+            { error && 
+                <div className="error"> 
+                    <FontAwesomeIcon icon={faExclamationTriangle} className="icon"/> 
+                    <p>A {error} occured, check your internet connection.</p>
+                </div> }
+            { trees && trees.map( tree => (
                 <ul key={tree._id}>
                     <li>
                         <img src={tree.owner_pic} alt="owner pic" />

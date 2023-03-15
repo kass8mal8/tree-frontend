@@ -14,10 +14,7 @@ const Home = () => {
 
     const handleProfile = () => { 
         document.querySelector('.overlay').classList.toggle('active')
-    }
-
-    //console.log(trees)
-    
+    }   
     
 
     return ( 

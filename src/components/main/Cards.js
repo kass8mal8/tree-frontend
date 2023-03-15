@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faClock, faHeart } from "@fortawesome/free-solid-svg-icons"
+import { faClock, faExclamationTriangle, faHeart } from "@fortawesome/free-solid-svg-icons"
 import useFetch from "../useFetch"
 
 const Cards = () => {
     // maximum latest = 4 for desktop and 2 for mobile
     
     const url = 'https://treeplanting.onrender.com/trees'
-    const trees = useFetch(url) 
+    const { data:trees, loading, error } = useFetch(url) 
 
     const plants = trees && trees.slice(-4).reverse()
 

@@ -15,6 +15,19 @@
     color: $light-green;
     position: relative;
 
+    .error{
+        text-align: center;
+
+        p{
+            margin-top: 30px;
+        }
+
+        .icon{
+            font-size: 40px;
+            color: $green;
+        }
+    }
+
     ul{
         li{
             display: inline-flex;
@@ -106,10 +119,12 @@
 
     .hide{
         gap: 10px;
-        text-align: left;
+        // text-align: left;
         
         @include responsive(mobile){
             overflow-x: scroll;
+            overflow-y: visible;
+            height:auto;
         }
         
         .nav-icon{
