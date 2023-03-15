@@ -9,7 +9,7 @@ const Today = () => {
 
     return ( 
         <div className="today">
-            { trees && trees.map( tree => (
+            { !trees ? <div> <p>Oops... No trees planted today, be the first one.</p> </div>: trees.map( tree => (
                 <ul key={tree._id}>
                     <li>
                         <img src={tree.owner_pic} alt="owner pic" />

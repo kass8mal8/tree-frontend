@@ -42,13 +42,18 @@
         border-radius: 30px;
         margin-top: 30px;
         ul{
+
+            small{
+                font-size: 20px;
+                opacity: 0.3;
+            }
             li{
                 padding: 5px;
                 background: $white;
                 width: 10px;
                 border: 1px solid $white;
                 border-radius: 40px;
-                padding-inline: 10px;
+                padding-inline: 10px;  
 
                 &:nth-of-type(1){
                     background: $white;
@@ -58,7 +63,16 @@
                     padding-inline: 10px;
                 }
 
+                
+
+                a{
+                    text-decoration: none;
+                    color: $green;
+
+                }
+
             }
+
         }
     }
 

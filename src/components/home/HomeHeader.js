@@ -12,7 +12,7 @@ const HomeHeader = ({ handleProfile }) => {
     // const sticky = navbar.offsetTop
 
     window.onscroll =()=> {        
-        if(window.pageYOffset >= 50){
+        if(window.pageYOffset >= 70){
             console.log(window.pageYOffset)
             navbar.classList.add("sticky")        
         }
@@ -23,7 +23,7 @@ const HomeHeader = ({ handleProfile }) => {
 
     return (  
         <div className="home-header">
-            { user && parseInt(d[0]) < 12 ? <h3> morning {user.displayName} </h3> : <h3>afternoon {user.displayName}</h3>}
+            { user && <h3> Hello {user.displayName} </h3> }
 
             <ul className="icons">
                 <li>

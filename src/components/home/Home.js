@@ -12,9 +12,6 @@ const Home = () => {
     const navigate = useNavigate()
     const user = useContext(userContext)
 
-    const url = 'https://treeplanting.onrender.com/trees'
-    const trees = useFetch(url) 
-
     const handleProfile = () => { 
         document.querySelector('.overlay').classList.toggle('active')
     }
@@ -29,7 +26,7 @@ const Home = () => {
             <HomeNav />
     
             <h3>Latest plants</h3>
-            <Cards trees={trees} />
+            <Cards />
 
             <h3> Today </h3>
             <Today />

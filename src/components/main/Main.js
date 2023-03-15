@@ -1,3 +1,4 @@
+// import { Outlet } from "react-router-dom";
 import Header from "../header/Header";
 import Hero from "../header/Hero";
 import Latest from "./Latest";
@@ -15,6 +16,7 @@ const Main = () => {
 
             {/* varies from desktop to mobile rendered differently */}
             <Latest />
+            {/* <Outlet /> */}
         </div>
      );
 }

@@ -7,7 +7,7 @@ import SignUp from './components/plantTree/SignUp';
 import Finish from './components/plantTree/Finish';
 import NotFound from "./components/NotFound"
 import Home from './components/home/Home';
-import useFetch from "./components/useFetch";
+// import Activity from './components/main/Activity';
 
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './components/firebase';
@@ -22,6 +22,7 @@ const App =({children})=> {
   
   //createRoutesFromChildren
   //const router = createBrowserRouter(routeProvider())
+  
 
   const [user, setUser] = useState({})
   onAuthStateChanged(auth, currentUser => setUser(currentUser) )
@@ -30,7 +31,6 @@ const App =({children})=> {
     <userContext.Provider value={user}>
         <div className="app-container">
             <Routes>
-                {/* <Route path='/home' element={<Home />} /> */}
                 <Route path = '/' element={ user ? <Home /> : <Main /> } />
                 <Route path='plant' element={<PlantActivity />} >
                   <Route path='signup' element={<SignUp />} />

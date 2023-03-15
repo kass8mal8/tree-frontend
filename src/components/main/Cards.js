@@ -1,14 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClock, faHeart } from "@fortawesome/free-solid-svg-icons"
+import useFetch from "../useFetch"
 
-const Cards = ({trees}) => {
+const Cards = () => {
     // maximum latest = 4 for desktop and 2 for mobile
     
+    const url = 'https://treeplanting.onrender.com/trees'
+    const trees = useFetch(url) 
+
     const plants = trees && trees.slice(-4).reverse()
 
-    const handleFav = () => {
-        document.querySelector('.fav-icon').color = "red"
-    }
+    const handleFav = () => { }
     
     // name, tree and source of image will be fetched from the database
 

@@ -133,7 +133,7 @@
   transition: 0.3s ease;
   padding: 15px 25px;
   left: -25px;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 40px 40px;
 }
 .home .home-header {
   position: relative;
@@ -321,6 +321,10 @@
   border-radius: 30px;
   margin-top: 30px;
 }
+.planting .mob-nav ul small {
+  font-size: 20px;
+  opacity: 0.3;
+}
 .planting .mob-nav ul li {
   padding: 5px;
   background: whitesmoke;
@@ -335,6 +339,10 @@
   margin-top: 0;
   color: rgb(112, 180, 138);
   padding-inline: 10px;
+}
+.planting .mob-nav ul li a {
+  text-decoration: none;
+  color: rgb(112, 180, 138);
 }
 .planting .signup {
   text-align: center;
