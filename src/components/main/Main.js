@@ -16,7 +16,6 @@ const Main = () => {
 
             {/* varies from desktop to mobile rendered differently */}
             <Latest />
-            {/* <Outlet /> */}
         </div>
      );
 }

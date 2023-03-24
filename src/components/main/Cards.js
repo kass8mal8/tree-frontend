@@ -18,7 +18,7 @@ const Cards = () => {
         <div className="hide">
 
             <div className="cards">
-                {plants && plants.map( plant => (
+                { plants && plants.map( plant => (
                     <div key={plant._id}>
                         <aside>
                             <img src={plant.owner_pic} alt="illustration" /> 
@@ -35,7 +35,7 @@ const Cards = () => {
                             </p>
                         </article>
                     </div>
-                ))} 
+                )) } 
             </div>
 
         </div>

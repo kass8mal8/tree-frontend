@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HomeNav = () => {
 
     return ( 
@@ -5,11 +7,19 @@ const HomeNav = () => {
             <h2>Help us save the earth</h2>
 
             <nav>
+
                 <ul>
-                    <li>Activity</li>
-                    <li>Statistics</li>
-                    <li>My trees</li>
+                    <li>
+                        <Link to="/">Activity</Link>
+                    </li>
+                    <li>
+                        <Link to="/statistics">Statistics</Link>
+                    </li>
+                    <li>
+                        <Link to="/my-trees">My trees</Link>
+                    </li>
                 </ul>
+
             </nav>
         </div>
      );

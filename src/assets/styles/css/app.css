@@ -128,13 +128,13 @@
 .home .home-header.sticky {
   position: absolute;
   z-index: 5;
-  top: 20px;
+  top: 30px;
   background: whitesmoke;
   width: 100%;
   transition: 0.3s ease;
   padding: 15px 25px;
   left: -25px;
-  border-radius: 0 0 40px 40px;
+  border-radius: 0 0 30px 30px;
 }
 .home .home-header {
   position: relative;
@@ -439,12 +439,28 @@
   }
 }
 
+.stats {
+  width: 100%;
+}
+.stats .back-icon {
+  padding: 10px;
+  border: 1px solid rgb(219, 217, 217);
+  border-radius: 30px;
+}
+.stats ul {
+  justify-content: space-between;
+}
+
 .app-container {
   font-family: rubik;
   width: 90%;
   transform: translateX(5%);
   color: rgb(93, 126, 105);
   position: relative;
+}
+.app-container a {
+  text-decoration: none;
+  color: rgb(112, 180, 138);
 }
 .app-container .error {
   text-align: center;
@@ -569,7 +585,6 @@
   background: whitesmoke;
   border-radius: 10px;
   position: relative;
-  height: 305px;
   width: 100%;
 }
 .app-container .hide .cards div h3 {
@@ -577,6 +592,7 @@
 }
 .app-container .hide .cards div .fav-icon {
   position: absolute;
+  z-index: 4;
   color: whitesmoke;
   transform: scale(1.5);
   transition: 0.3s ease;
@@ -597,8 +613,7 @@
   font-size: 15px;
 }
 .app-container .hide .cards div article .time {
-  position: absolute;
-  bottom: 2px;
+  margin-top: 10px;
 }
 .app-container .hide img {
   width: 100%;

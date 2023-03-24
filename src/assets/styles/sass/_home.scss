@@ -6,6 +6,7 @@
         transition: .3s ease;
         display: block;
     }
+    
 
     .today{
         width: 100%;
@@ -105,13 +106,13 @@
     .home-header.sticky{
         position: absolute;
         z-index: 5;
-        top: 20px;
+        top: 30px;
         background: $white;
         width: 100%;
         transition: .3s ease;
         padding:15px 25px;
         left: -25px;
-        border-radius: 0 0 40px 40px;
+        border-radius: 0 0 30px 30px;
     }
     .home-header{
         position: relative;

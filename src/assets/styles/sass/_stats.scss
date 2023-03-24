@@ -1,0 +1,13 @@
+.stats{
+    width:100%;
+
+    .back-icon{
+        padding: 10px;
+        border: 1px solid $dark-gray;
+        border-radius: 30px;
+    }
+
+    ul{
+        justify-content: space-between;
+    }
+}

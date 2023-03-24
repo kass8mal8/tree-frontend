@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCog, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { userContext } from "../../App";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 
 const HomeHeader = ({ handleProfile }) => {
@@ -12,8 +12,9 @@ const HomeHeader = ({ handleProfile }) => {
     // const sticky = navbar.offsetTop
 
     window.onscroll =()=> {        
-        if(window.pageYOffset >= 70){
-            navbar.classList.add("sticky")        
+        if(window.pageYOffset >= 80){
+            navbar.classList.add("sticky")  
+            console.log(window.pageYOffset)
         }
         else{
             navbar.classList.remove("sticky")

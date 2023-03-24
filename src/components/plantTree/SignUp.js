@@ -4,24 +4,19 @@ import { motion, AnimatePresence } from "framer-motion"
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 import { auth } from "../firebase"
 import axios from "axios"
-import { useContext } from "react";
-import { userContext } from "../../App";
-
-//import { useEffect } from "react"
 
 const SignUp = () => {
 
-    const user = useContext(userContext)
     const navigate = useNavigate()
     const provider = new GoogleAuthProvider()
     const uri = 'https://treeplanting.onrender.com/users'
 
-    const postUserData = async() => {
+    const postUserData = async(username, pic, email, id) => {
         const user_info = {
-            name: user.displayName,
-            photoURL: user.photoURL,
-            email: user.email,
-            googleID: user.uid
+            name: username,
+            photoURL:pic,
+            email: email,
+            googleID: id
         }
     
         const res = await axios.post(uri, user_info, {
@@ -34,9 +29,11 @@ const SignUp = () => {
     
     const handleGoogleSignIn = async() => {
         try {
-            await signInWithPopup(auth, provider)
-            postUserData()
+            const user = await signInWithPopup(auth, provider)
+            postUserData(user.user.displayName, user.user.photoURL, user.user.email, user.user.uid)
             navigate('/plant/2')
+
+            console.log("User: ",user.user);
         } 
         catch (error) {
             console.log(error.message)
