@@ -14,7 +14,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './components/firebase';
 
 import { useState, createContext } from 'react';
-import { createRoutesFromChildren, Route, Routes } from "react-router"
+import { Route, Routes } from "react-router"
 
 
 export const userContext = createContext()
@@ -24,7 +24,7 @@ const App =({children})=> {
 
   const [user, setUser] = useState({})
   onAuthStateChanged(auth, currentUser => setUser(currentUser) )
-  const url = "http://localhost:5000/users"
+  const url = "https://treeplanting.onrender.com/users"
   const {data: users, loading, error} = useFetch(url)
 
   return (

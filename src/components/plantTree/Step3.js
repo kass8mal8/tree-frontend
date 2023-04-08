@@ -2,7 +2,7 @@ import plant from "../../assets/images/pot-plant.png"
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion"
 import axios from 'axios'
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useRef } from "react";
 import { userContext } from "../../App";
 
 const Step3 = () => {
@@ -29,13 +29,13 @@ const Step3 = () => {
                 }
             })
             console.log(res.data)
-            // navigate('/plant/finish')
+            navigate('/plant/finish')
 
         } 
         catch (error) {
             console.log(error.message);
         }
-        navigate('/plant/finish')
+        
         
     }
 
